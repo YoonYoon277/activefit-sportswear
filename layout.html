@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activefitsportswear.com</title>
+    <!-- Bootstrap Dark Theme CSS -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- w3 -->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="layout.html">
+        <div class="logo"> <span class="me-2"><i class="fas fa-running"></i></span>
+             <span>ActiveFit</span></div> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == url_for('index') %}active{% endif %}" href="layout.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == url_for('product_list') %}active{% endif %}" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == url_for('reviews') %}active{% endif %}" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == url_for('contact') %}active{% endif %}" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == url_for('inquiry') %}active{% endif %}" href="inquiry.html">Inquiry</a>
+                    </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle fa-lg"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+<!-- Hero Section -->
+<section class="hero-section position-relative">
+    <div class="hero-image" style="background-image: url('image/home.jpg'); height: 600px; background-size: cover;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.5;"></div>
+        <div class="container h-100 position-relative">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-white">
+                        <h1 class="display-4 fw-bold">Elevate Your Performance</h1>
+                        <p class="lead">Premium sportswear designed for athletes and fitness enthusiasts.</p>
+                        <div class="mt-4">
+                            <a href="products.html" class="btn btn-primary btn-lg me-2">Shop Now</a>
+                            <a href="about.html" class="btn btn-outline-light btn-lg">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/shirt2.jpg" class="card-img-top" alt="Shirt2" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">SwiftDry Performance Tee</h5>
+                            <p class="card-text text-primary fw-bold">$29.99</p>
+                            <p class="card-text">Lightweight and moisture-wicking tee ideal for high-intensity workouts.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=2" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/shirt7.jpg" class="card-img-top" alt="Shirt7" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ProFlex Training Shirt</h5>
+                            <p class="card-text text-primary fw-bold">$34.99</p>
+                            <p class="card-text">Breathable mesh panels and 4-way stretch fabric for flexibility and comfort.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=7" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+             <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/blouse3.png" class="card-img-top" alt="blouse3" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">PowerHold Medium-Impact Bra</h5>
+                            <p class="card-text text-primary fw-bold">$35.00</p>
+                            <p class="card-text">Medium support for gym training or cardio workouts.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=11" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+                <div class="row">
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/pant6.jpg" class="card-img-top" alt="pant6" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">EnduroMax Training Pants</h5>
+                            <p class="card-text text-primary fw-bold">$54.00</p>
+                            <p class="card-text">Durable, tapered fit pants with zip pockets and breathable fabric.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=15" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/shorts2.jpg" class="card-img-top" alt="shorts2" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">SprintLite Running Shorts</h5>
+                            <p class="card-text text-primary fw-bold">$29.5</p>
+                            <p class="card-text">Lightweight and fast-drying, ideal for runners.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=22" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/shorts6.jpg" class="card-img-top" alt="shorts6" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">CoreMove Biker Shorts</h5>
+                            <p class="card-text text-primary fw-bold">$30.00</p>
+                            <p class="card-text">High-rise and squat-proof for gym or cycling sessions.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=25" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+                <div class="row">
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/shoe6.jpg" class="card-img-top" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">TrailGrip Outdoor Shoes</h5>
+                            <p class="card-text text-primary fw-bold">$98.00</p>
+                            <p class="card-text">Designed for off-road adventures with extra grip and waterproof material.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=27" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/bag2.jpg" class="card-img-top"  style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">UrbanFit Gym Tote</h5>
+                            <p class="card-text text-primary fw-bold">$38.99</p>
+                            <p class="card-text">Chic and functional tote with internal organizer pockets for gym essentials.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=45" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-img-container" style="height: 300px; overflow: hidden;">
+                            <img src="image/sock1.jpg" class="card-img-top" style="object-fit: cover; height: 100%; width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">CoolMax Quarter Socks (2-Pack)</h5>
+                            <p class="card-text text-primary fw-bold">$14.00</p>
+                            <p class="card-text">Designed with mesh ventilation zones to keep feet cool.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="product_details.html?id=56" class="btn btn-outline-primary">View Details</a>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="products.html" class="btn btn-primary">View All Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">Shop By Category</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card bg-dark text-white border-0">
+                    <img src="image/pant7.jpg" class="card-img" alt="Apparel" style="height: 300px; object-fit: cover; opacity: 0.7;">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title h3">Apparel</h5>
+                        <p class="card-text">Performance clothing designed for comfort and durability.</p>
+                        <a href="products.html" class="btn btn-outline-light">Shop Clothing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white border-0">
+                    <img src="image/shoe4.jpg" class="card-img" alt="Footwear" style="height: 300px; object-fit: cover; opacity: 0.7;">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title h3">Footwear</h5>
+                        <p class="card-text">Athletic shoes for maximum performance and support.</p>
+                        <a href="products.html" class="btn btn-outline-light">Shop Footwear</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white border-0">
+                    <img src="image/arm1.jpg" class="card-img" alt="Accessories" style="height: 300px; object-fit: cover; opacity: 0.7;">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title h3">Accessories</h5>
+                        <p class="card-text">Essential gear to complement your fitness routine.</p>
+                        <a href="products.html" class="btn btn-outline-light">Shop Accessories</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose ActiveFit</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <div class="icon-box">
+                    <i class="fas fa-medal fa-3x mb-3 text-primary"></i>
+                    <h4>Premium Quality</h4>
+                    <p>Durable materials that withstand intense workouts and regular washing.</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="icon-box">
+                    <i class="fas fa-tshirt fa-3x mb-3 text-primary"></i>
+                    <h4>Performance Fabrics</h4>
+                    <p>Moisture-wicking technology to keep you dry during workouts.</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="icon-box">
+                    <i class="fas fa-truck fa-3x mb-3 text-primary"></i>
+                    <h4>Fast Shipping</h4>
+                    <p>Quick delivery to get you equipped for your fitness journey.</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="icon-box">
+                    <i class="fas fa-undo fa-3x mb-3 text-primary"></i>
+                    <h4>Easy Returns</h4>
+                    <p>30-day hassle-free return policy for complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Testimonial -->
+<section class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner"  style="background-color: rgb(72, 71, 71);">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card text-center p-4">
+                                <div class="avatar mx-auto mb-4">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+J&background=random" alt="Sarah J." class="rounded-circle" width="80">
+                                </div>
+                                <div class="testimonial-content">
+                                    <p class="lead">The quality of ActiveFit sportswear is outstanding! <br>
+                                        I've been a loyal customer for 3 years and everything I've purchased has held up <br>through countless workouts and washes.</p>
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <h5>Sarah J.</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card text-center p-4">
+                                <div class="avatar mx-auto mb-4">
+                                    <img src="https://ui-avatars.com/api/?name=Mike+T&background=random" alt="Mike T." class="rounded-circle" width="80">
+                                </div>
+                                <div class="testimonial-content">
+                                    <p class="lead">The Ultra Flex Running Shoes completely transformed my running experience. <br>
+                                        Excellent support and incredibly comfortable even on my longest runs.</p>
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <h5>Mike T.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="reviews.html" class="btn btn-outline-light">Read More Reviews</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h3 class="mb-4">Join Our Newsletter</h3>
+                <p class="mb-4">Subscribe to receive updates on new arrivals, special offers, and fitness tips.</p>
+                <form class="row g-3 justify-content-center">
+                    <div class="col-auto">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Flash Messages -->
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+    
+  <!-- Floating Social Media Icons -->
+  <div class="social-media">
+  <a href="https://www.facebook.com/GUSTOUniversity?mibextid=LQQJ4d" target="_blank" class="fa fa-facebook"></a>
+   <a href="https://www.gusto.edu.mm" target="_blank" class="fa fa-google"></a> 
+  <a href="https://www.youtube.com/results?search_query=gusto+university+myanmar" target="_blank" class="fa fa-youtube"></a> 
+  </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>About ActiveFit</h5>
+                    <p>Premium sportswear for athletes and fitness enthusiasts since 2010.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/GUSTOUniversity?mibextid=LQQJ4d" target="_blank" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.gusto.edu.mm" target="_blank" class="text-light me-2"><i class="fab fa-google"></i></a>
+                        <a href="https://www.youtube.com/results?search_query=gusto+university+myanmar" target="_blank" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="layout.html" class="text-decoration-none text-light">Home</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-light">About Us</a></li>
+                        <li><a href="products.html" class="text-decoration-none text-light">Products</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> No.216, Times City, Yangon</p>
+                        <p><i class="fas fa-phone me-2"></i> +959 443 395 800</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@activefitsportswear.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p>&copy; 2023 ActiveFit Sportswear. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
